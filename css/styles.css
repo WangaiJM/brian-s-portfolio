@@ -103,7 +103,6 @@ header {
   color: #000;
 }
 #about {
-  height: 100vh;
   background-color: rgb(235, 108, 108);
   color: var(--white);
   padding: 3rem;
@@ -114,9 +113,8 @@ header {
   align-items: center;
   flex-direction: column;
   border-bottom: 1px solid var(--lightgray);
-  margin-bottom: 0.5rem;
+  padding: 2rem 0;
   position: relative;
-  height: 20vh;
 }
 .titles i {
   position: absolute;
@@ -125,10 +123,13 @@ header {
   background-color: transparent;
   padding: 1rem;
 }
+.sub-title {
+  padding: 2rem 0;
+}
 .about-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 80vh;
+
   column-gap: 5rem;
 }
 .about-left {
@@ -182,12 +183,11 @@ header {
 }
 /* skills */
 #skills {
-  height: 100vh;
   background-color: rgb(61, 121, 121);
   color: var(--white);
+  padding: 3rem 0;
 }
 .skills-content {
-  height: 80vh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -205,7 +205,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 40%;
 }
 .card-head img {
   width: 50%;
@@ -227,10 +226,9 @@ header {
 #work {
   background-color: rgb(148, 148, 150);
   color: var(--white);
-  height: 100vh;
+  padding: 3rem 0;
 }
 .work-content {
-  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -244,6 +242,7 @@ header {
 }
 .btn {
   padding: 1rem 2rem;
+  margin-top: 2rem;
   background-color: transparent;
   border: 2px solid currentColor;
   color: var(--white);
@@ -251,12 +250,11 @@ header {
 }
 /* contacts */
 #contacts {
-  height: 60vh;
   background-color: rgb(250, 190, 79);
   color: var(--white);
 }
 .contact-content {
-  height: 40vh;
+  /* height: 40vh; */
 }
 .icons {
   display: flex;
@@ -275,4 +273,64 @@ footer {
   height: 15rem;
   color: var(--white);
   background-color: rgb(72, 72, 145);
+}
+/* Mobile */
+@media (max-width: 640px) {
+  .container {
+    width: 90%;
+  }
+  .titles {
+    flex-direction: column;
+    border-bottom: 1px solid var(--lightgray);
+    position: relative;
+    margin-bottom: 2rem;
+    padding: 2rem 0;
+  }
+  .titles i {
+    position: absolute;
+    bottom: 0;
+    transform: translateY(50%);
+    background-color: transparent;
+  }
+  .sub-title {
+    display: none;
+  }
+  .about-content {
+    display: block;
+  }
+  .about-left img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .skills-content {
+    display: block;
+  }
+  .skill-cards {
+    display: block;
+  }
+  .card-head img {
+    height: 10%;
+    width: 10%;
+  }
+  .work-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .work-images {
+    display: block;
+  }
+  .work-image {
+    margin: 1rem 0;
+  }
+  .btn {
+    margin-bottom: 2rem;
+  }
+
+  .icons li {
+    margin: 0;
+    padding: 1rem;
+  }
 }
