@@ -70,6 +70,9 @@ header {
 .navigation a:hover {
   color: var(--lightgray);
 }
+.hambuger {
+  display: none;
+}
 .hero {
   position: relative;
   height: 90vh;
@@ -253,9 +256,7 @@ header {
   background-color: rgb(250, 190, 79);
   color: var(--white);
 }
-.contact-content {
-  /* height: 40vh; */
-}
+
 .icons {
   display: flex;
   align-items: center;
@@ -278,6 +279,65 @@ footer {
 @media (max-width: 640px) {
   .container {
     width: 90%;
+  }
+  .navigation {
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+  }
+  .navigation h1 {
+    font-size: 1.6rem;
+  }
+  .navigation ul {
+    position: absolute;
+    top: 7rem;
+    right: 0;
+    flex-direction: column;
+    display: none;
+    text-align: center;
+    width: 50%;
+  }
+  .navigation.active ul {
+    display: block;
+  }
+  .hambuger {
+    justify-self: end;
+    display: block;
+    width: 4rem;
+    height: 3rem;
+    position: relative;
+    background-color: transparent;
+    border: none;
+  }
+  .hambuger span {
+    position: absolute;
+    background-color: var(--white);
+    width: 100%;
+    height: 2px;
+    transition: all 0.4s ease-in-out;
+  }
+  .hambuger span:nth-child(1) {
+    top: 0;
+    left: 0;
+  }
+  .hambuger span:nth-child(2) {
+    top: 1.4rem;
+    left: 0;
+  }
+  .hambuger span:nth-child(3) {
+    bottom: 0;
+    left: 0;
+  }
+  .navigation.active .hambuger > span:nth-child(1) {
+    top: 1.5rem;
+    transform: rotate(135deg);
+  }
+  .navigation.active .hambuger > span:nth-child(2) {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  .navigation.active .hambuger > span:nth-child(3) {
+    top: 1.5rem;
+    transform: rotate(-135deg);
   }
   .titles {
     flex-direction: column;
