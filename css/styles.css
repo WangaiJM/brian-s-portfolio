@@ -115,16 +115,36 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border-bottom: 1px solid var(--lightgray);
   padding: 2rem 0;
   position: relative;
+}
+.titles::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  background-color: var(--white);
+  width: 40%;
+  height: 1px;
+  z-index: 1;
 }
 .titles i {
   position: absolute;
   bottom: 0;
   transform: translateY(50%);
-  background-color: transparent;
-  padding: 1rem;
+  padding: 2rem;
+  z-index: 2;
+}
+.i1 {
+  background-color: rgb(235, 108, 108);
+}
+.i2 {
+  background-color: rgb(61, 121, 121);
+}
+.i3 {
+  background-color: rgb(148, 148, 150);
+}
+.i4 {
+  background-color: rgb(250, 190, 79);
 }
 .sub-title {
   padding: 2rem 0;
